@@ -46,16 +46,15 @@ gem 'binding_of_caller'
 gem 'jquery-fileupload-rails'
 gem 'i18n', '~> 0.8.6'
 
-gem 'chromedriver-helper'
-gem 'launchy'
-# gems for testing
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'launchy'
+  # gems for testing
 end
 
 group :development do
