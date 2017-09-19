@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+ruby '2.4.2'
 gem 'devise'
 gem 'figaro'
 gem 'autoprefixer-rails'
