@@ -44,7 +44,8 @@ gem "pundit"
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'jquery-fileupload-rails'
-gem 'i18n', '~> 0.8.6'
+gem 'i18n'
+gem 'devise-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

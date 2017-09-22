@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Script for running I18N tasks
+# I18N is a gem for easily translating a website
+
+gem install i18n-tasks
+i18n-tasks health
+i18n-tasks add-missing
+
+#run the script from the root of the app with ./script/i18ntask

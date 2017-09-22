@@ -1,0 +1,9 @@
+<%= simple_form_for root_path(@phone) do |f| %>
+  <%= f.input :number  %>
+  <%= f.button :submit, "envoyer" %>
+<% end %>
+
+<% @phones.each do |phone| %>
+  <%= phone.number %>
+  <%= phone.called %>
+<% end %>
