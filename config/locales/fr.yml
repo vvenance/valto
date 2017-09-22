@@ -1,5 +1,5 @@
 ---
-en:
+fr:
   devise:
     confirmations:
       new:
@@ -25,26 +25,25 @@ en:
         message: Message
     passwords:
       edit:
-        change_my_password: Change my password
-        change_your_password: Change your password
-        confirm_new_password: Confirm new password
-        new_password: New password
+        change_my_password: Changer mon mot de passe
+        change_your_password: Changer votre mot de passe
+        confirm_new_password: COnfirmer le nouveau mot de passe
+        new_password: Nouveau mot de passe
       new:
-        forgot_your_password: Forgot your password
+        forgot_your_password: Oubli de mot de passe
         send_me_reset_password_instructions: Send me reset password instructions
     registrations:
       edit:
-        are_you_sure: Are you sure
+        are_you_sure: Etes vous sûr?
         cancel_my_account: Cancel my account
         currently_waiting_confirmation_for_email: Currently waiting confirmation for
           email
         leave_blank_if_you_don_t_want_to_change_it: Leave blank if you don t want
           to change it
-        title: Title
+        title: Titre
         unhappy: Unhappy
-        update: Update
-        we_need_your_current_password_to_confirm_your_changes: We need your current
-          password to confirm your changes
+        update: Mise à jour
+        we_need_your_current_password_to_confirm_your_changes: Nous avons besin de votre mot de passe actuel pour confirmer vos changements
       new:
         sign_up: Sign up
     sessions:
@@ -52,23 +51,22 @@ en:
         sign_in: Sign in
     shared:
       links:
-        back: Back
-        didn_t_receive_confirmation_instructions: Didn t receive confirmation instructions
-        didn_t_receive_unlock_instructions: Didn t receive unlock instructions
-        forgot_your_password: Forgot your password
+        back: Retour
+        didn_t_receive_confirmation_instructions: Instuctions de confirmation non reçues
+        didn_t_receive_unlock_instructions: Informations de déblocage non reçues
+        forgot_your_password: Mot de passe oublié
         sign_in: Sign in
         sign_in_with_provider: Sign in with provider
         sign_up: Sign up
     unlocks:
       new:
-        resend_unlock_instructions: Resend unlock instructions
-  hello: Hello world
+        resend_unlock_instructions: Renvoyer les informations de déblocage.
+  hello: Bonjour le monde
   home:
     index:
-      send: Send
+      send: Envoyer
   controllers:
     home:
-      we_call_you_back: We call you back as soon as possible.
-      smth_went_wrong_try_again: Something went wrong. Try again.
-      not_valid_nbr_try_again: This is not a valid number. Try again.
-
+      we_call_you_back: Nous vous rappellerons dans les plus brefs délais.
+      smth_went_wrong_try_again: Quelque chose s'est mal passé. Merci de réessayer.
+      not_valid_nbr_try_again: Ce numéro n'est pas valable. Merci d'essayer à nouveau.

@@ -4,7 +4,6 @@ class HomeController < ApplicationController
     @phone = Phone.new
     authorize @phone
     @phones = policy_scope(Phone)
-    authorize @phones
   end
 
   def create
@@ -14,12 +13,12 @@ class HomeController < ApplicationController
       phone.number = params["/"][:number]
       phone.called = false
       if phone.save
-        flash[:notice] = "Nous vous rappellerons dans les plus brefs délais."
+        flash[:notice] = t('controllers.home.we_call_you_back')
       else
-        flash[:alert] = "Quelque chose s'est mal passé. Merci de réessayer."
+        flash[:alert] = t.('controllers.home.smth_went_wrong_try_again')
       end
     else
-      flash[:alert] = "Ce numéro n'est pas valable. Merci d'essayer à nouveau."
+      flash[:alert] = t.('controllers.home.not_valid_nbr_try_again')
     end
     redirect_to root_path
   end
