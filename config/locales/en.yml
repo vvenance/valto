@@ -66,6 +66,7 @@ en:
   home:
     index:
       send: Send
+      number: Your phone number
   controllers:
     home:
       we_call_you_back: We call you back as soon as possible.

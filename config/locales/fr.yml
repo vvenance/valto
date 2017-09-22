@@ -65,6 +65,7 @@ fr:
   home:
     index:
       send: Envoyer
+      number: Votre numéro de téléphone
   controllers:
     home:
       we_call_you_back: Nous vous rappellerons dans les plus brefs délais.

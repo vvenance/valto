@@ -1,4 +1,4 @@
-<%= simple_form_for root_path(@phone) do |f| %>
-  <%= f.input :number %>
+<%= minimal_form_for root_path(@phone) do |f| %>
+  <%= f.input :number, placeholder: t('.number') %>
   <%= f.button :submit, t('.send') %>
 <% end %>
