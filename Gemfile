@@ -46,6 +46,8 @@ gem 'binding_of_caller'
 gem 'jquery-fileupload-rails'
 gem 'i18n'
 gem 'devise-i18n'
+gem 'rspec'
+gem 'rspec-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,6 +57,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'launchy'
+  gem "factory_girl_rails", "~> 4.0"
   # gems for testing
 end
 

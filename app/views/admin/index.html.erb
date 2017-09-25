@@ -1,0 +1,10 @@
+<h1>My admin panel</h1>
+
+<% @phones.each do |phone| %>
+  <%= phone.number %>
+  <% if phone.called? %>
+    <%= link_to t('.set_as_called') set_called_path,  %><!-- path to edit later -->
+  <% else %>
+    <%= t('.already_called') %>
+  <% end %>
+<% end %>

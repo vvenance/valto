@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+
+  get 'user_interface/index'
+
   devise_for :users
 
   scope '(:locale)', locale: /en/ do
