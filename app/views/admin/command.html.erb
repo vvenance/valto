@@ -1,0 +1,8 @@
+<div class="container">
+  <h2><%= @user.email%>'s commands</h2>
+  <% @commands.each do |c| %>
+    <%= c.name %>
+    <%= c.status %>
+    <br/>
+  <% end %>
+</div>

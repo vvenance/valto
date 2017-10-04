@@ -26,7 +26,7 @@
 
       <!-- Links when logged in -->
     <% if current_user.admin %>
-      <%= link_to "admin interface", admin_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "admin interface", admin_show_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% else %>
       <%= link_to "my interface", user_interface_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>

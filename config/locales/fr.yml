@@ -67,7 +67,7 @@ fr:
       send: Envoyer
       number: Votre numéro de téléphone
   admin:
-    index:
+    show:
       set_as_called: Noter appelé
       already_called: Ce numéro à déjà été rappelé
   controllers:
