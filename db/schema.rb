@@ -10,10 +10,77 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170922120155) do
+ActiveRecord::Schema.define(version: 20171004131728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "commands", force: :cascade do |t|
+    t.string "name"
+    t.boolean "status"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_commands_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.bigint "feature_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["feature_id"], name: "index_comments_on_feature_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "contracts", force: :cascade do |t|
+    t.string "contract_file"
+    t.bigint "command_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["command_id"], name: "index_contracts_on_command_id"
+  end
+
+  create_table "estimates", force: :cascade do |t|
+    t.boolean "status"
+    t.string "estimate_file"
+    t.bigint "command_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["command_id"], name: "index_estimates_on_command_id"
+  end
+
+  create_table "features", force: :cascade do |t|
+    t.string "feature_file"
+    t.boolean "status"
+    t.string "name"
+    t.string "description"
+    t.bigint "command_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["command_id"], name: "index_features_on_command_id"
+  end
+
+  create_table "invoice_data", force: :cascade do |t|
+    t.string "compagny_name"
+    t.integer "siren"
+    t.string "adress"
+    t.integer "number"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_invoice_data_on_user_id"
+  end
+
+  create_table "invoices", force: :cascade do |t|
+    t.boolean "status"
+    t.string "invoice_file"
+    t.bigint "command_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["command_id"], name: "index_invoices_on_command_id"
+  end
 
   create_table "phones", force: :cascade do |t|
     t.string "number"
@@ -33,8 +100,17 @@ ActiveRecord::Schema.define(version: 20170922120155) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "commands", "users"
+  add_foreign_key "comments", "features"
+  add_foreign_key "comments", "users"
+  add_foreign_key "contracts", "commands"
+  add_foreign_key "estimates", "commands"
+  add_foreign_key "features", "commands"
+  add_foreign_key "invoice_data", "users"
+  add_foreign_key "invoices", "commands"
 end

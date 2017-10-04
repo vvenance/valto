@@ -66,6 +66,10 @@ fr:
     index:
       send: Envoyer
       number: Votre numéro de téléphone
+  admin:
+    show:
+      set_as_called: Noter appelé
+      already_called: Ce numéro à déjà été rappelé
   controllers:
     home:
       we_call_you_back: Nous vous rappellerons dans les plus brefs délais.

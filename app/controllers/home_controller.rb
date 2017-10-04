@@ -15,10 +15,10 @@ class HomeController < ApplicationController
       if phone.save
         flash[:notice] = t('controllers.home.we_call_you_back')
       else
-        flash[:alert] = t.('controllers.home.smth_went_wrong_try_again')
+        flash[:alert] = t('controllers.home.smth_went_wrong_try_again')
       end
     else
-      flash[:alert] = t.('controllers.home.not_valid_nbr_try_again')
+      flash[:alert] = t('controllers.home.not_valid_nbr_try_again')
     end
     redirect_to root_path
   end

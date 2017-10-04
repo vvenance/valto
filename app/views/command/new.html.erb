@@ -1,0 +1,6 @@
+<div class="form">
+  <%= minimal_form_for root_path(@phone) do |f| %>
+    <%= f.input :name, placeholder: "enter the new command's name" %>
+    <%= f.button :submit, t('.send') %>
+  <% end %>
+</div>

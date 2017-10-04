@@ -67,6 +67,10 @@ en:
     index:
       send: Send
       number: Your phone number
+  admin:
+    show:
+      set_as_called: Set as called
+      already_called: This number has already been called
   controllers:
     home:
       we_call_you_back: We call you back as soon as possible.

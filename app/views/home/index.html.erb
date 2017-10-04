@@ -1,6 +1,8 @@
-<%= minimal_form_for root_path(@phone) do |f| %>
-  <%= f.input :number, placeholder: t('.number') %>
-  <%= f.button :submit, t('.send') %>
-<% end %>
+<div class="form">
+  <%= minimal_form_for root_path(@phone) do |f| %>
+    <%= f.input :number, placeholder: t('.number') %>
+    <%= f.button :submit, t('.send') %>
+  <% end %>
+</div>
 <!-- minimal_form_for is a version of simple_form_for without fields descriptions
 it's used exactly as simple_form_for -->
