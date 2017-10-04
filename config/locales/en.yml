@@ -1,5 +1,20 @@
 ---
 en:
+  admin:
+    phones:
+      already_called: Already called
+      set_as_called: Set as called
+    show:
+      already_called: This number has already been called
+      set_as_called: Set as called
+  command:
+    new:
+      send: Send
+  controllers:
+    home:
+      not_valid_nbr_try_again: This is not a valid number. Try again.
+      smth_went_wrong_try_again: Something went wrong. Try again.
+      we_call_you_back: We call you back as soon as possible.
   devise:
     confirmations:
       new:
@@ -65,15 +80,10 @@ en:
   hello: Hello world
   home:
     index:
-      send: Send
       number: Your phone number
-  admin:
-    show:
-      set_as_called: Set as called
-      already_called: This number has already been called
-  controllers:
-    home:
-      we_call_you_back: We call you back as soon as possible.
-      smth_went_wrong_try_again: Something went wrong. Try again.
-      not_valid_nbr_try_again: This is not a valid number. Try again.
-
+      send: Send
+  shared:
+    navbar:
+      profile: Profile
+      sign_in: Sign in
+      sign_out: Sign out
