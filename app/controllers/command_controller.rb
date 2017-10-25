@@ -10,6 +10,7 @@ class CommandController < ApplicationController
     command.status = false
     command.user_id = params[:id]
     command.save
+    # blou
     redirect_to admin_command_path(id: params[:id])
   end
 
