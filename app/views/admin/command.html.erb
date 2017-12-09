@@ -1,5 +1,9 @@
-<!-- <div class="container">
- -->  <h2><%= @user.email%>'s commands</h2>
+
+<div class="container">
+  <h2><%= @user.email%>'s commands</h2>
+  <%= "#{@invoice_data.compagny_name}" %><br/>
+  <%= "#{@invoice_data.adress}" %><br/>
+  <%= "#{@invoice_data.number}/#{@invoice_data.siren}" %><br/><br/><br/>
   <% @commands.each do |c| %>
     <div class="container">
         <div class="profile text-center">

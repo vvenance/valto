@@ -40,13 +40,13 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'simple_form'
-gem "pundit"
+gem 'pundit'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'jquery-fileupload-rails'
 gem 'i18n'
 gem 'devise-i18n'
-gem 'rspec'
+gem 'rspec', '~> 3.7'
 gem 'rspec-rails'
 
 group :development, :test do
@@ -57,6 +57,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'launchy'
+  gem 'warden'
   gem "factory_girl_rails", "~> 4.0"
   # gems for testing
 end
