@@ -1,13 +1,19 @@
 <div class="container">
   <% if @phones %>
     <% @phones.each do |phone| %>
-      <%= phone.number %>
       <% if phone.called == false %>
-        <%= link_to t('.set_as_called'), phone_update_path(phone.id), method: :post  %>
-      <% else %>
-        <%= t('.already_called') %>
+        <div class="container">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="card w-100">
+              <div class="card-body">
+                <p class="card-text">
+                <h4><%= phone.number %></h4>
+                      Avez vous appelé ce client?     <%= link_to t('.set_as_called'), phone_update_path(phone.id), class: "btn btn-primary", method: :post  %>
+              </div>
+            </div>
+          </div>
+        <% end %>
       <% end %>
-      <br/>
     <% end %>
-  <% end %>
 </div>
+

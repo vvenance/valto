@@ -14,6 +14,9 @@
  *= require_self
  */
 @import "bootstrap";
+@import "shared/footer";
+@import "shared/page";
+@import "shared/flipping_cards";
+@import "shared/admin_panel_cards";
 
-@import "navbar";
 

@@ -1,8 +1,72 @@
-<div class="form">
-  <%= minimal_form_for root_path(@phone) do |f| %>
-    <%= f.input :number, placeholder: t('.number') %>
-    <%= f.button :submit, t('.send') %>
-  <% end %>
+<div class='business-hero' >
 </div>
-<!-- minimal_form_for is a version of simple_form_for without fields descriptions
-it's used exactly as simple_form_for -->
+</div class='container'>
+  <div class='row' id='container-top-margin'>
+    <div class='col-xs-12 col-sm-6 col-md-6'>
+      <div class = "flipping-card-wrapper w-75" id="centered">
+        <div class = "flipping-card transition active-on-hover">
+          <div class = "front">
+            <i class="fa fa-briefcase fa-5x" aria-hidden="true"></i>
+            <h4>Un icone a styliser et centrer ici</h4>
+          </div>
+          <div class = "back">
+              <%= "Mettre plus d'informations de ce côté" %>
+          </div>
+        </div>
+      </div>
+     </div>
+    <div class='col-xs-12 col-sm-6 col-md-6'>
+      <div class = "flipping-card-wrapper w-75" id="centered">
+        <div class = "flipping-card transition active-on-hover">
+          <div class = "front">
+            <i class="fa fa-briefcase fa-5x" aria-hidden="true"></i>
+            <h4>Un icone a styliser et centrer ici</h4>
+          </div>
+          <div class = "back">
+              <%= "Mettre plus d'informations de ce côté" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-xs-12 col-sm-6 col-md-6'>
+      <div class = "flipping-card-wrapper w-75" id="centered">
+        <div class = "flipping-card transition active-on-hover">
+          <div class = "front">
+            <i class="fa fa-briefcase fa-5x" aria-hidden="true"></i>
+            <h4>Un icone a styliser et centrer ici</h4>
+          </div>
+          <div class = "back">
+              <%= "Mettre plus d'informations de ce côté" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-xs-12 col-sm-6 col-md-6'>
+      <div class = "flipping-card-wrapper w-75" id="centered">
+        <div class = "flipping-card transition active-on-hover">
+          <div class = "front">
+            <i class="fa fa-briefcase fa-5x" aria-hidden="true" id='centered'></i>
+            <h4>Un icone a styliser et centrer ici</h4>
+          </div>
+          <div class = "back">
+              <%= "Mettre plus d'informations de ce côté" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='container'>
+
+  <div class="form">
+    <%= minimal_form_for root_path(@phone) do |f| %>
+      <%= f.input :number, placeholder: t('.number') %>
+      <%= f.button :submit, t('.send') %>
+    <% end %>
+  </div>
+  <!-- minimal_form_for is a version of simple_form_for without fields descriptions
+  it's used exactly as simple_form_for -->
+
+</div>
+
+<%= javascript_include_tag 'application' %>
