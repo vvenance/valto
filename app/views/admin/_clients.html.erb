@@ -1,7 +1,15 @@
 <div class="container">
   <% @users.each do |user| %>
-    <%= user.email %>
-    <%= link_to "voir les commandes", admin_command_path(id: user.id), method: :get %>
-    <br/>
+    <div class="container">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="card w-100">
+          <div class="card-body">
+            <p class="card-text">
+              <h4><%= user.email %></h4>
+                  Acceder aux détails de ce client.    <%= link_to "voir les commandes", admin_command_path(id: user.id), class: "btn btn-primary", method: :get %></p>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>

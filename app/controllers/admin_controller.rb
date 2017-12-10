@@ -17,4 +17,6 @@ class AdminController < ApplicationController
   def admin_params
     params.permit(:id)
   end
+
+  layout "application"
 end
