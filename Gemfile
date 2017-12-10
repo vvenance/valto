@@ -37,7 +37,7 @@ gem 'devise'
 gem 'figaro'
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.0.0.beta'
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'simple_form'
 gem "pundit"
