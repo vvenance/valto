@@ -7,13 +7,16 @@
             <div class="card w-100">
               <div class="card-body">
                 <p class="card-text">
-                <h4><%= phone.number %></h4>
-                      Avez vous appelé ce client?     <%= link_to t('.set_as_called'), phone_update_path(phone.id), class: "btn btn-primary", method: :post  %>
+                  <h4><%= phone.number %></h4>
+                  Avez vous appelé ce client?
+                  <%= link_to t('.set_as_called'), phone_update_path(phone.id), class: "btn btn-primary", method: :post  %>
+                </p>
               </div>
             </div>
           </div>
-        <% end %>
+        </div>
       <% end %>
     <% end %>
+  <% end %>
 </div>
 
