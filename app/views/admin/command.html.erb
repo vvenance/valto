@@ -6,43 +6,41 @@
   <%= "#{@invoice_data.number}/#{@invoice_data.siren}" %><br/><br/><br/>
   <% @commands.each do |c| %>
     <div class="container">
-        <div class="profile text-center">
-          <div class="main">
-            <div class="main-content">
-              <img src="images/seb.jpeg" alt="" width="150" class="img-circle">
-              <h2><%= c.name %></h2>
-              <p><%= c.status %></p>
-              <a href="#" class="btn btn-primary">Contacter le client</a>
-            </div>
+      <div class="profile text-center">
+        <div class="main">
+          <div class="main-content">
+            <img src="images/seb.jpeg" alt="" width="150" class="img-circle">
+            <h2><%= c.name %></h2>
+            <p><%= c.status %></p>
+            <a href="#" class="btn btn-primary">Contacter le client</a>
           </div>
-          <div class="stat">
-            <div class="stat-content">
-              <h3>Devis</h3>
-              <p>devis</p>
-            </div>
+        </div>
+        <div class="stat">
+          <div class="stat-content">
+            <h3>Devis</h3>
+            <p>devis</p>
           </div>
-          <div class="stat">
-            <div class="stat-content">
-              <h3>Contrats</h3>
-              <p>contrats</p>
-            </div>
-            </div>
-          <div class="stat">
-            <div class="stat-content">
-              <h3>Factures</h3>
-              <p>factures</p>
-            </div>
-            </div>
-          <div class="description">
-            <div class="description-content">
-              <h3>Visualiser les features</h3>
-              <p class="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ex risus, ultricies id hendrerit vel, placerat eget sem. In vitae gravida quam.
-              </p>
-            </div>
+        </div>
+        <div class="stat">
+          <div class="stat-content">
+            <h3>Contrats</h3>
+            <p>contrats</p>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-content">
+            <h3>Factures</h3>
+            <p>factures</p>
+          </div>
+        </div>
+        <div class="description">
+          <div class="description-content">
+            <h3>Visualiser les features</h3>
+            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ex risus, ultricies id hendrerit vel, placerat eget sem. In vitae gravida quam.</p>
           </div>
         </div>
       </div>
+    </div>
   <% end %>
 </div>
 

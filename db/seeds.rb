@@ -15,13 +15,16 @@ InvoiceDatum.destroy_all
 puts 'tables destroyed'
 puts 'creating seeds'
 
-phone1 = Phone.new(number: '0657687890', called: false).save
-phone2 = Phone.new(number: '0657688890', called: false).save
-phone3 = Phone.new(number: '0657687360', called: true).save
+User.new(email: 'admin@admin.fr', password: 'password', admin: true).save
+User.new(email: 'user@user.fr', password: 'password', admin: false).save
 
-command1 = Command.new(name: "one project", status: false, user_id: 2).save
-command2 = Command.new(name: "another project", status: true, user_id: 2).save
+Phone.new(number: '0657687890', called: false).save
+Phone.new(number: '0657688890', called: false).save
+Phone.new(number: '0657687360', called: true).save
 
-invoice_data = InvoiceDatum.new(compagny_name: "FakeCompagny", adress: "5 fake street 42000 FakeTown", number: '0987654321', siren: '123456789098', user_id: 2).save
+Command.new(name: "one project", status: false, user_id: 2).save
+Command.new(name: "another project", status: true, user_id: 2).save
+
+InvoiceDatum.new(compagny_name: "FakeCompagny", adress: "5 fake street 42000 FakeTown", number: '0987654321', siren: '123456789098', user_id: 2).save
 
 puts 'seeds created'
