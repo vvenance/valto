@@ -6,22 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
-    <!-- <link rel="stylesheet" type="text/css" href="theme/dist/theme.min.css" /> -->
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= render partial:'shared/navbar' %>
+    <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render partial:'shared/footer' %>
     <!-- javascript -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS84UTZ/www-widgetapi.js" async=""></script>
     <script src="/theme/dist/theme.min.js"></script>
-    <%#= javascript_include_tag 'https://cdn.jsdelivr.net/jquery.mb.ytplayer/3.0.17/jquery.mb.YTPlayer.min.js' %>
-    <%= yield(:js) %>
   </body>
 </html>
