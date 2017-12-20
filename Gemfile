@@ -21,7 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem "therubyracer"
 # gem icons GitHub
 gem 'octicons-rails'
-gem 'railties', '~> 5.0', '>= 5.0.0.1'
+gem 'railties'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
