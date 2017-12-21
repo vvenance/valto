@@ -16,9 +16,3 @@ function flip6CardToBack () {
     document.getElementById ("sixth-card").classList.add ("show-back");
 }
 
-
-
-$('.flip').hover(function(){
-        $(this).find('.card').toggleClass('flipped');
-
-    });
