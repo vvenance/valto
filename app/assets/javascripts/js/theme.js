@@ -20,14 +20,19 @@ $(function () {
 });
 
     // Animate.js Test
-var myAnimation = anime({
-  targets: ['.blue', '.green'],
-  translateX: '13rem',
-  rotate: 180,
-  borderRadius: '8px',
-  duration: 2000,
-  loop: true
+document.querySelector(".card-flip").classList.toggle("flip");
+
+/* 
+ * Holder.js for demo image
+ * Just for demo purpose
+ */
+Holder.addTheme('gray', {
+  bg: '#777',
+  fg: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
 });
+
     // Animate.js Test
 
 
