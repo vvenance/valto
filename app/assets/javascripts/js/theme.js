@@ -1,16 +1,4 @@
 
-    // Animate.js Test
-var myAnimation = anime({
-  targets: ['.blue', '.green'],
-  translateX: '13rem',
-  rotate: 180,
-  borderRadius: '8px',
-  duration: 2000,
-  loop: true
-});
-    // Animate.js Test
-
-
 $(function () {
   navbar.init();
 
@@ -30,6 +18,18 @@ $(function () {
 
   newsletter.init();
 });
+
+    // Animate.js Test
+var myAnimation = anime({
+  targets: ['.blue', '.green'],
+  translateX: '13rem',
+  rotate: 180,
+  borderRadius: '8px',
+  duration: 2000,
+  loop: true
+});
+    // Animate.js Test
+
 
 var animation = {
   lastScrollY: 0,
