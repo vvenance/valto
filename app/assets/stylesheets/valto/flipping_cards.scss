@@ -6,6 +6,14 @@
 // }
 
 
+.carte {
+width: 450px !important;
+height: 5rem !important;
+color: red !important;
+
+}
+
+
 .card-flip {
   perspective: 1000px;
   &:hover .flip,
