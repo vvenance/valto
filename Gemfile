@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 gem "therubyracer"
 gem 'entypo-rails'
+gem 'anime_js_rails'
 
 
 # Use CoffeeScript for .coffee assets and views
