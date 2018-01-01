@@ -6,24 +6,19 @@ Rails.application.routes.draw do
   # get 'feature/index'
 
   # post 'feature/create'
-  resources :feature
+  resources :feature, only: [:index, :show, :update, :create]
 
-  get 'invoice_datum/show'
+  resources :comment, only: [:index, :create]
 
-  post 'invoice_datum/update'
+  resources :invoice_datum, only: [:show, :update, :create]
 
-  post 'invoice_datum/create'
+  resources :command, only: [:index, :show, :update, :create]
 
-  get 'command/new'
+  resources :phone, only: [:update]
 
-  post 'command/create'
+  resources :admin, only: [:show, :command]
 
-  post 'phone/update'
-
-  get 'admin/show'
-  get 'admin/command'
-
-  get 'user_interface/index'
+  resources :user_interface, only: [:index]
 
   devise_for :users
 
