@@ -13,3 +13,4 @@
 //= require rails-ujs
 //= require turbolinks
 //require tree .
+//= require anime
