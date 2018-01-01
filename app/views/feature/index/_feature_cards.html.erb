@@ -1,0 +1,20 @@
+<div class="container">
+  <% @features.each do |feature| %>
+    <%= link_to feature_path(feature) do %>
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="card w-100">
+            <div class="card-body">
+              <p class="card-text">
+                <h3><%= feature.name %></h3>
+                <h4><%= feature.status %></h4>
+                <h4><%= feature.description %></h4>
+                <h6><%= feature.feature_file %></h6>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  # get 'feature/show'
+
+  # post 'feature/update'
+
+  # get 'feature/index'
+
+  # post 'feature/create'
+  resources :feature
+
+  get 'invoice_datum/show'
+
+  post 'invoice_datum/update'
+
+  post 'invoice_datum/create'
+
   get 'command/new'
 
   post 'command/create'

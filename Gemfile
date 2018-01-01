@@ -48,6 +48,8 @@ gem 'i18n'
 gem 'devise-i18n'
 gem 'rspec', '~> 3.7'
 gem 'rspec-rails'
+gem 'rack-utf8_sanitizer'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,12 @@
+<% if current_user.admin == true %>
+  <div class="form">
+    <h1>Créer une nouvelle feature</h1>
+    <%= minimal_form_for feature_index_path, method: :post do |f| %>
+      <%= f.input :name, placeholder: 'nom de la feature' %>
+      <%= f.input :description, placeholder: 'description de la feature' %>
+      <%= f.input :feature_file, placeholder: 'entrez le nom du fichier' %>
+      <%= f.input :command_id, as: :hidden, input_html: { value: @command.id } %>
+      <%= f.button :submit, 'créer' %>
+    <% end %>
+  </div>
+<% end %>

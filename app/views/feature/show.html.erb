@@ -1,0 +1,22 @@
+<h1>Feature#show</h1>
+<p>Find me in app/views/feature/show.html.erb</p>
+<div class="container">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="card w-100">
+      <div class="card-body">
+        <p class="card-text">
+          <h3><%= @feature.name %></h3>
+          <h4><%= @feature.status %></h4>
+          <h4><%= @feature.description %></h4>
+          <h6><%= @feature.feature_file %></h6>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-xs-6 col-sm-6 col-md-6" >
+    <%= link_to "retour à la liste des features", feature_index_path(id: @feature.command_id) %>
+  </div>
+</div>
