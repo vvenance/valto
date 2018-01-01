@@ -13,10 +13,12 @@ module Valto
     config.load_defaults 5.1
 
     config.i18n.default_locale = :fr
+    require "rack/utf8_sanitizer"
     # defines the default locale to french
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.middleware.insert 0, Rack::UTF8Sanitizer
   end
 end

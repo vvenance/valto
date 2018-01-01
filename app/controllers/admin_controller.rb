@@ -10,6 +10,7 @@ class AdminController < ApplicationController
     @user = User.where(id: id).first
     @commands = Command.where(user_id: id)
     @command = Command.new
+    @invoice_data = InvoiceDatum.where(user_id: id).first
   end
 
   private
