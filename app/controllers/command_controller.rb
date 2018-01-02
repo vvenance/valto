@@ -16,11 +16,12 @@ class CommandController < ApplicationController
   def create
     command_params
     command = Command.new
-    command.name = params[:name]
+    command.name = params["/command"]["name"]
+    command.user_id = params["/command"]["user_id"]
     command.status = false
-    command.user_id = params[:id]
     command.save
-    redirect_to admin_command_path(id: params[:id])
+    authorize command
+    redirect_to admin_command_path(id: params["/command"]["user_id"])
   end
 
   private

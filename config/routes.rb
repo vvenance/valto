@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :admin, only: [:index]
   get 'admin-command' => 'admin#command'
-
+  post 'admin-command' => 'command#create'
   resources :user_interface, only: [:index]
 
   devise_for :users
