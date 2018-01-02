@@ -1,6 +1,6 @@
 class PhoneController < ApplicationController
   def update
-    id = params[:format]
+    id = params['id']
     phone = Phone.find(id)
     authorize(phone)
     phone.called = true
