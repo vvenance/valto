@@ -1,0 +1,13 @@
+<% if current_user.admin == true %>
+  <div class="form">
+    <h1>Mettre à jour les données de facturation</h1>
+    <%= minimal_form_for @invoice_data, url:invoice_datum_path(id: @invoice_data.id), method: :patch do |f| %>
+      <%= f.input :compagny_name %>
+      <%= f.input :adress %>
+      <%= f.input :number %>
+      <%= f.input :siren %>
+      <%= f.input :user_id, as: :hidden, input_html: { value: @user.id } %>
+      <%= f.button :submit, 'Mettre à jour' %>
+    <% end %>
+  </div>
+<% end %>

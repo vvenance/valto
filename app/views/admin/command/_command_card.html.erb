@@ -1,36 +1,44 @@
 <% @commands.each do |c| %>
-    <div class="container">
-      <div class="profile text-center">
-        <div class="main">
-          <div class="main-content">
-            <h2><%= c.name %></h2>
-            <p><%= c.status %></p>
+  <div class="container">
+    <div class="profile text-center">
+      <div class="main">
+        <div class="main-content">
+          <h2><%= c.name %></h2>
+          <p><%= c.status %></p>
+          <% if @invoice_data %>
             <%= link_to invoice_datum_path(id: @invoice_data.id), class: "btn btn-primary" do %>Voir les données de facturation client<% end %>
-          </div>
+          <% end %>
         </div>
-        <div class="stat">
+      </div>
+      <div class="stat">
+        <%= link_to estimate_index_path(id: c.id) do %>
           <div class="stat-content">
             <h3>Devis</h3>
             <p>devis</p>
           </div>
-        </div>
-        <div class="stat">
+        <% end %>
+      </div>
+      <div class="stat">
+        <%= link_to contract_index_path(id: c.id) do %>
           <div class="stat-content">
             <h3>Contrats</h3>
             <p>contrats</p>
           </div>
-        </div>
-        <div class="stat">
+        <% end %>
+      </div>
+      <div class="stat">
+        <%= link_to invoice_index_path(id: c.id) do %>
           <div class="stat-content">
             <h3>Factures</h3>
             <p>factures</p>
           </div>
-        </div>
-        <div class="description">
-          <div class="description-content"><%= link_to 'Visualiser les features', feature_index_path(id: c.id) %>
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ex risus, ultricies id hendrerit vel, placerat eget sem. In vitae gravida quam.</p>
-          </div>
+        <% end %>
+      </div>
+      <div class="description">
+        <div class="description-content"><%= link_to 'Visualiser les features', feature_index_path(id: c.id) %>
+          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ex risus, ultricies id hendrerit vel, placerat eget sem. In vitae gravida quam.</p>
         </div>
       </div>
     </div>
-  <% end %>
+  </div>
+<% end %>

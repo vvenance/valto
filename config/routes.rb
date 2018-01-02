@@ -16,9 +16,16 @@ Rails.application.routes.draw do
 
   resources :phone, only: [:update]
 
+  resources :estimate, only: [:index, :create, :update]
+
+  resources :contract, only: [:index, :create, :update]
+
+  resources :invoice, only: [:index, :create, :update]
+
   resources :admin, only: [:index]
   get 'admin-command' => 'admin#command'
   post 'admin-command' => 'command#create'
+  post 'admin-create-user' => 'admin#create_user'
   resources :user_interface, only: [:index]
 
   devise_for :users

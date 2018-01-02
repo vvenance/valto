@@ -1,12 +1,8 @@
-class InvoiceDatumPolicy < ApplicationPolicy
+class InvoicePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      InvoiceDatum.all
+      scope
     end
-  end
-
-  def show?
-    true
   end
 
   def create?

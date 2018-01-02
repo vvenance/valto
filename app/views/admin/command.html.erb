@@ -1,10 +1,16 @@
 
 <div class="container">
   <h2><%= @user.email%>'s commands</h2>
-  <%= "#{@invoice_data.compagny_name}" %><br/>
-  <%= "#{@invoice_data.adress}" %><br/>
-  <%= "#{@invoice_data.number}/#{@invoice_data.siren}" %><br/><br/><br/>
-  <%= render 'admin/command/command_card', object: @commands %>
+  <% if @invoice_data %>
+    <%= "#{@invoice_data.compagny_name}" %><br/>
+    <%= "#{@invoice_data.adress}" %><br/>
+    <%= "#{@invoice_data.number}/#{@invoice_data.siren}" %><br/><br/><br/>
+    <%= render 'admin/command/update_invoice_data' %>
+  <% else %>
+    <%= render 'admin/command/invoice_data_form', object: @new_invoice_data %>
+  <% end %>
+
+  <%= render 'admin/command/command_card', object: @commands, object: @user %>
   <%= render 'admin/command/new_command_form', object: @new_command, object: @user %>
 </div>
 

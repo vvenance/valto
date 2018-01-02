@@ -1,0 +1,11 @@
+<% if current_user.admin == true %>
+  <div class="form">
+    <h1>Créer une nouvelle facture</h1>
+    <%= minimal_form_for @new_estimate, url:estimate_index_path(id: @command.id), method: :post do |f| %>
+      <%= f.input :status, collection: ["en attente d'un action utilisateur"] %>
+      <%= f.input :estimate_file, placeholder: 'nom du fichier de la facture' %>
+       <%= f.input :command_id, as: :hidden, input_html: { value: @command.id } %>
+      <%= f.button :submit, 'créer' %>
+    <% end %>
+  </div>
+<% end %>

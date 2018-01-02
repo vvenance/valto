@@ -1,0 +1,26 @@
+<div class="container">
+  <% @contracts.each do |contract| %>
+    <div class="container">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="card w-100">
+          <div class="card-body">
+            <p class="card-text">
+              <h4><%= contract.contract_file %></h4>
+              <h4><%= contract.created_at %></h4>
+              <% if current_user.admin == true %>
+                <div class="form">
+                  <h1>mettre à jour la facture</h1>
+                  <%= minimal_form_for contract, url:contract_path(id: contract.id), method: :patch do |f| %>
+                    <%= f.input :contract_file, placeholder: 'nom du fichier du contrat' %>
+                     <%= f.input :command_id, as: :hidden, input_html: { value: @command.id } %>
+                    <%= f.button :submit, 'créer' %>
+                  <% end %>
+                </div>
+              <% end %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

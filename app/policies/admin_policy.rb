@@ -16,4 +16,8 @@ class AdminPolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def create_user?
+    user.admin?
+  end
 end

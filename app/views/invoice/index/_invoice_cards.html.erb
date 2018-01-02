@@ -1,0 +1,28 @@
+<div class="container">
+  <% @invoices.each do |invoice| %>
+    <div class="container">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="card w-100">
+          <div class="card-body">
+            <p class="card-text">
+              <h3><%= invoice.status %></h3>
+              <h4><%= invoice.invoice_file %></h4>
+              <h4><%= invoice.created_at %></h4>
+              <% if current_user.admin == true %>
+                <div class="form">
+                  <h1>mettre à jour la facture</h1>
+                  <%= minimal_form_for invoice, url:invoice_path(id: invoice.id), method: :patch do |f| %>
+                    <%= f.input :status, collection: ["a payer", "payée"] %>
+                    <%= f.input :invoice_file, placeholder: 'nom du fichier de la facture' %>
+                     <%= f.input :command_id, as: :hidden, input_html: { value: @command.id } %>
+                    <%= f.button :submit, 'créer' %>
+                  <% end %>
+                </div>
+              <% end %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
