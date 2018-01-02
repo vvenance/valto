@@ -1,7 +1,7 @@
-class AdminPolicy < ApplicationPolicy
+class CommentPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      User.all
+      Comment.all
     end
   end
 
@@ -9,11 +9,7 @@ class AdminPolicy < ApplicationPolicy
     true
   end
 
-  def command?
-    true
-  end
-
-  def show?
+  def create?
     true
   end
 end

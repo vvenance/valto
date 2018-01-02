@@ -10,11 +10,20 @@ class FeatureController < ApplicationController
   end
 
   def show
-    @feature = Feature.find(params[:id])
+    @feature = Feature.find(params['id'])
+    @command = Command.find(@feature.command_id)
     authorize @feature
   end
 
   def update
+    feature = Feature.find(params['id'])
+    feature.name = params["/feature/#{params['id']}"]['name']
+    feature.description = params["/feature/#{params['id']}"]['description']
+    feature.feature_file = params["/feature/#{params['id']}"]['feature_file']
+    feature.status = params["/feature/#{params['id']}"]['status']
+    authorize feature
+    feature.save
+    redirect_to feature_path(id: params["/feature/#{params['id']}"]['feature_id'])
   end
 
   def create

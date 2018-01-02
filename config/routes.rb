@@ -16,7 +16,8 @@ Rails.application.routes.draw do
 
   resources :phone, only: [:update]
 
-  resources :admin, only: [:show, :command]
+  resources :admin, only: [:index]
+  get 'admin-command' => 'admin#command'
 
   resources :user_interface, only: [:index]
 

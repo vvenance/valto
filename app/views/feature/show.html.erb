@@ -9,14 +9,35 @@
           <h4><%= @feature.status %></h4>
           <h4><%= @feature.description %></h4>
           <h6><%= @feature.feature_file %></h6>
+          <%= link_to 'commentaires', comment_index_path(id: @feature.id), method: :get %>
         </p>
       </div>
     </div>
   </div>
 </div>
 
+<% if current_user.admin? %>
+  <div class="container">
+    <div class="col-xs-6 col-sm-6 col-md-6" >
+      <div class= "row">
+        <%= minimal_form_for feature_path, method: :put do |f| %>
+          <%= f.input :name, placeholder: 'nom de la feature' %>
+          <%= f.input :description, placeholder: 'description de la feature' %>
+          <%= f.input :feature_file, placeholder: 'entrez le nom du fichier' %>
+          <%= f.input :status, as: :boolean, checked_value: true, unchecked_value: false %>
+          <%= f.input :command_id, as: :hidden, input_html: { value: @command.id } %>
+           <%= f.input :feature_id, as: :hidden, input_html: { value: @feature.id } %>
+          <%= f.button :submit, 'mettre à jour' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <div class="container">
   <div class="col-xs-6 col-sm-6 col-md-6" >
-    <%= link_to "retour à la liste des features", feature_index_path(id: @feature.command_id) %>
+    <div class="row">
+      <%= link_to "retour à la liste des features", feature_index_path(id: @feature.command_id) %>
+    </div>
   </div>
 </div>

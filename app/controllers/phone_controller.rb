@@ -5,7 +5,7 @@ class PhoneController < ApplicationController
     authorize(phone)
     phone.called = true
     phone.save
-    redirect_to admin_show_path
+    redirect_to admin_index_path
   end
 
   private

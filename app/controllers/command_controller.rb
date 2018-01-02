@@ -1,7 +1,17 @@
 class CommandController < ApplicationController
-  def new
-    @command = Command.new
+
+  def index
+
   end
+
+  def show
+
+  end
+
+  def update
+
+  end
+
 
   def create
     command_params

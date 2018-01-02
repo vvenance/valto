@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  def show
+  def index
     @phones = Phone.all
     @users = User.where(admin: false)
   end
@@ -19,5 +19,5 @@ class AdminController < ApplicationController
     params.permit(:id)
   end
 
-  layout "application"
+
 end

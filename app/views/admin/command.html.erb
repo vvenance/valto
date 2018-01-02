@@ -11,7 +11,7 @@
           <div class="main-content">
             <h2><%= c.name %></h2>
             <p><%= c.status %></p>
-            <%= link_to invoice_datum_show_path(id: @invoice_data.id), class: "btn btn-primary" do %>Voir les données de facturation client<% end %>
+            <%= link_to invoice_datum_path(id: @invoice_data.id), class: "btn btn-primary" do %>Voir les données de facturation client<% end %>
           </div>
         </div>
         <div class="stat">
