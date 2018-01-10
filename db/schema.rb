@@ -66,10 +66,10 @@ ActiveRecord::Schema.define(version: 20180102155351) do
     t.string "compagny_name"
     t.string "adress"
     t.integer "number"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "siren"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_invoice_data_on_user_id"
   end
 
@@ -111,6 +111,5 @@ ActiveRecord::Schema.define(version: 20180102155351) do
   add_foreign_key "contracts", "commands"
   add_foreign_key "estimates", "commands"
   add_foreign_key "features", "commands"
-  add_foreign_key "invoice_data", "users"
   add_foreign_key "invoices", "commands"
 end

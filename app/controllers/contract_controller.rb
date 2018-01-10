@@ -15,6 +15,11 @@ class ContractController < ApplicationController
     redirect_to contract_index_path(id: contract.command_id)
   end
 
+  def show
+    @contract = Contract.find_by(command_id: params["id"])
+    authorize @contract
+  end
+
   def update
     contract = Contract.find(params["id"])
     contract.contract_file = params["contract"]["contract_file"]

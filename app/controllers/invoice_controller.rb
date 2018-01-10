@@ -1,8 +1,11 @@
 class InvoiceController < ApplicationController
   def index
+    # TO DO refacto policy to accept command_id in params for scope resolving
     test = policy_scope(Invoice)
-    @invoices = Invoice.where(command_id: params[:id])
-    @new_invoice = Invoice.new
+    @invoices = Invoice.where(command_id: params["id"])
+    if current_user.admin?
+      @new_invoice = Invoice.new
+    end
     @command = Command.find(params[:id])
   end
 

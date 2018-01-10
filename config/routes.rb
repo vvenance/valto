@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :estimate, only: [:index, :create, :update]
 
-  resources :contract, only: [:index, :create, :update]
+  resources :contract, only: [:index, :show, :create, :update]
 
   resources :invoice, only: [:index, :create, :update]
 

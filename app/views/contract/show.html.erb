@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="card w-100">
+      <div class="card-body">
+        <p class="card-text">
+          <h4><%= @contract.contract_file %></h4>
+          <h4><%= @contract.created_at %></h4>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <%= link_to "retour à mes commandes", command_index_path %>
+  </div>
+</div>

@@ -9,7 +9,7 @@
               <h4><%= contract.created_at %></h4>
               <% if current_user.admin == true %>
                 <div class="form">
-                  <h1>mettre à jour la facture</h1>
+                  <h1>mettre à jour le contrat</h1>
                   <%= minimal_form_for contract, url:contract_path(id: contract.id), method: :patch do |f| %>
                     <%= f.input :contract_file, placeholder: 'nom du fichier du contrat' %>
                      <%= f.input :command_id, as: :hidden, input_html: { value: @command.id } %>

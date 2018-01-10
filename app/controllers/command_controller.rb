@@ -1,7 +1,8 @@
 class CommandController < ApplicationController
 
   def index
-
+    @commands = policy_scope(Command)
+    @new_command = Command.new
   end
 
   def show
@@ -19,9 +20,12 @@ class CommandController < ApplicationController
     command.name = params["/command"]["name"]
     command.user_id = params["/command"]["user_id"]
     command.status = false
-    command.save
     authorize command
-    redirect_to admin_command_path(id: params["/command"]["user_id"])
+    command.save
+    # TO DO add error gestion if command is not updated
+    # display alert on redirect
+    redirect_to admin_command_path(id: params["/command"]["user_id"]) if current_user.admin?
+    redirect_to command_index_path unless current_user.admin?
   end
 
   private
