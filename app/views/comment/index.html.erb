@@ -1,0 +1,24 @@
+<div class="container">
+  <% @comments.each do |comment| %>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <%= comment.content %>
+      <%= comment.user.email %>
+      <%= "écrit le #{comment.created_at}" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="container">
+  <h2>Nouveau commentaire</h2>
+  <%= minimal_form_for comment_index_path, method: :post do |f| %>
+    <%= f.input :content, placeholder: 'votre commentaire' %>
+    <%= f.input :feature_id, as: :hidden, input_html: { value: @feature.id } %>
+    <%= f.button :submit, 'créer' %>
+  <% end %>
+</div>
+
+<div class='container'>
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <%= link_to 'retour à la feature', feature_path(id: @feature.id) %>
+  </div>
+</div>

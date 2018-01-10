@@ -1,0 +1,8 @@
+<div class="form">
+  <h1>Créer une nouvelle commande</h1>
+  <%= minimal_form_for command_index_path, method: :post do |f| %>
+    <%= f.input :name, placeholder: 'nom de la commande' %>
+    <%= f.input :user_id, as: :hidden, input_html: { value: @user.id } %>
+    <%= f.button :submit, 'créer' %>
+  <% end %>
+</div>

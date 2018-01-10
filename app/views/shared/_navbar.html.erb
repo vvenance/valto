@@ -29,9 +29,9 @@
       <li class="nav-item">
         <% if user_signed_in? %>
           <% if current_user.admin %>
-            <%= link_to "admin interface", admin_show_path, class: "nav-link nav-link--rounded" %>
+            <%= link_to "admin interface", admin_index_path, class: "nav-link nav-link--rounded" %>
           <% else %>
-            <%= link_to "my interface", user_interface_index_path, class: "nav-link nav-link--rounded" %>
+            <%= link_to "my interface", command_index_path, class: "nav-link nav-link--rounded" %>
           <% end %>
         <% else %>
           <%= link_to "Connexion", new_user_session_path, class: "nav-link nav-link--rounded" %>

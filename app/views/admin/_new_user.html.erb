@@ -1,0 +1,10 @@
+<% if current_user.admin == true %>
+  <div class="form">
+    <h1>Créer un nouveau compte utilisateur</h1>
+    <%= minimal_form_for @new_user, url:admin_create_user_path(id: 0), method: :post do |f| %>
+      <%= f.input :email, placeholder: 'email utilisateur' %>
+      <%= f.input :password, placeholder: 'définir un password de base' %>
+      <%= f.button :submit, 'créer' %>
+    <% end %>
+  </div>
+<% end %>

@@ -17,7 +17,9 @@
   <body>
     <%= render partial:'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="custom-black-text">
+      <%= yield %>
+    </div>
     <%= render partial:'shared/footer' %>
     <!-- javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>

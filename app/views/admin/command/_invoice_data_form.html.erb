@@ -1,0 +1,13 @@
+<% if current_user.admin == true %>
+  <div class="form">
+    <h1>Créer des données de facturation</h1>
+    <%= minimal_form_for @new_invoice_data, url:invoice_datum_index_path, method: :post do |f| %>
+      <%= f.input :compagny_name, placeholder: 'nom de la société' %>
+      <%= f.input :adress, placeholder: 'adresse de la société' %>
+      <%= f.input :number, placeholder: 'numéro la société' %>
+      <%= f.input :siren, placeholder: 'siren de la société' %>
+      <%= f.input :user_id, as: :hidden, input_html: { value: @user.id } %>
+      <%= f.button :submit, 'créer' %>
+    <% end %>
+  </div>
+<% end %>

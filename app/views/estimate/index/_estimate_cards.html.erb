@@ -1,0 +1,28 @@
+<div class="container">
+  <% @estimates.each do |estimate| %>
+    <div class="container">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="card w-100">
+          <div class="card-body">
+            <p class="card-text">
+              <h3><%= estimate.status %></h3>
+              <h4><%= estimate.estimate_file %></h4>
+              <h4><%= estimate.created_at %></h4>
+              <% if current_user.admin == true %>
+                <div class="form">
+                  <h1>mettre à jour la facture</h1>
+                  <%= minimal_form_for estimate, url:estimate_path(id: estimate.id), method: :patch do |f| %>
+                    <%= f.input :status, collection: ["en attente d'un action utilisateur", "déclinée", "acceptée", "propsition retirée"] %>
+                    <%= f.input :estimate_file, placeholder: 'nom du fichier de la facture' %>
+                     <%= f.input :command_id, as: :hidden, input_html: { value: @command.id } %>
+                    <%= f.button :submit, 'créer' %>
+                  <% end %>
+                </div>
+              <% end %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
