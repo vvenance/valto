@@ -9,6 +9,11 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse navbar-padding-bottom">
     <ul class="navbar-nav">
       <li class="nav-item">
+          
+          TEST
+          
+      </li>
+      <li class="nav-item">
         <% if user_signed_in? %>
           <%= link_to destroy_user_session_path, class: "nav-link", method: :delete do %>
             <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
