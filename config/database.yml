@@ -26,7 +26,7 @@ development:
 database: valto_development
 host: localhost
 username: valto
-password: cequejeveut
+password: Vpassword
 
 
   # The specified database role being used to connect to postgres.
@@ -64,7 +64,7 @@ test:
 database: valto_test
 host: localhost
 username: valto
-password: cequejeveut
+password: Vpassword
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
